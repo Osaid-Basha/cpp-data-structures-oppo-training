@@ -112,3 +112,31 @@ The file `Taske_1_da.cpp` includes demonstrations and test cases for:
 ```bash
 g++ Taske_1_da.cpp -o runme
 ./runme
+```
+
+---
+
+## 📁 Folder Structure
+
+```
+.
+├── array.h
+├── singleLinkedList.h
+├── StackArray.h
+├── StackLinkedList.h
+├── QueueArray.h
+├── QueueLinkedList.h
+├── DoublyLinkedList.h
+├── CircularLinkedList.h
+├── Node.h
+└── Taske_1_da.cpp
+```
+
+---
+
+## 🔍 How to Run Tests
+
+- All test cases are located inside `Taske_1_da.cpp`
+- Simply compile and run as shown above
+- Output will display for each structure
+
