@@ -13,6 +13,21 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Stack">
+      <UniqueIdentifier>{4a6eaa68-8ce8-42e8-9602-3f77b48a8590}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Queue">
+      <UniqueIdentifier>{d4e67c16-0c5f-41f8-9248-51a68ff436e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Linked List">
+      <UniqueIdentifier>{ee57f912-e966-4cbe-a611-2366650357dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Array">
+      <UniqueIdentifier>{db85e105-f89f-4b8c-b2c5-2bd5c09c58f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Circular">
+      <UniqueIdentifier>{59d096f6-1e1d-40b4-a95f-406720b2011d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Taske_1_da.cpp">
@@ -20,20 +35,35 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="array.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="LinkedList.h">
+    <ClInclude Include="Node.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="StackArray.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Stack</Filter>
     </ClInclude>
     <ClInclude Include="StackLinkedList.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Stack</Filter>
     </ClInclude>
-    <ClInclude Include="Node.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="QueueArray.h">
+      <Filter>Header Files\Queue</Filter>
+    </ClInclude>
+    <ClInclude Include="QueueLinkedList.h">
+      <Filter>Header Files\Queue</Filter>
+    </ClInclude>
+    <ClInclude Include="singleLinkedList.h">
+      <Filter>Header Files\Linked List</Filter>
+    </ClInclude>
+    <ClInclude Include="array.h">
+      <Filter>Header Files\Array</Filter>
+    </ClInclude>
+    <ClInclude Include="DoublyLinkedList.h">
+      <Filter>Header Files\Linked List</Filter>
+    </ClInclude>
+    <ClInclude Include="CircularLinkedList.h">
+      <Filter>Header Files\Circular</Filter>
+    </ClInclude>
+    <ClInclude Include="QueueArrayCircular.h">
+      <Filter>Header Files\Queue</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

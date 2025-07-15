@@ -1,19 +1,20 @@
 #pragma once
 #include <iostream>
 #include <stdexcept>
+#include "Node.h"
 using namespace std;
 
 
 
 template <typename T>
-class LinkedList {
+class singleLinkedList {
 private:
     Node<T>* head; // Pointer to the first node
     int length;    // Number of elements in the list
 
 public:
     // Constructor to initialize an empty list
-    LinkedList() {
+    singleLinkedList() {
         head = nullptr;
         length = 0;
     }
@@ -110,7 +111,7 @@ public:
     }
 
     // Destructor to free all nodes in the list
-    ~LinkedList() {
+    ~singleLinkedList() {
         Node<T>* current = head;
         while (current != nullptr) {
             Node<T>* next = current->next;

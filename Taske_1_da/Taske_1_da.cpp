@@ -6,13 +6,18 @@
 using namespace std;
 #include "Node.h"
 #include "array.h"
-#include "linkedlist.h"
+#include "singleLinkedList.h"
 #include "StackArray.h"
 #include "StackLinkedList.h"
+#include "QueueArray.h"
+#include "QueueLinkedList.h"
+#include "DoublyLinkedList.h"
+#include "QueueArrayCircular.h"
 
 int main()
 {	
-	//----------------------------------------Dynamic Arrays------------------------------------------
+	cout << "----------------------------------------Dynamic Arrays------------------------------------------" << endl;
+	
 	//create object 
 	Array<int> arr;
 	//add value in buttom to top
@@ -41,11 +46,11 @@ int main()
 	
 	arr.print();
 	cout << "Size: " << arr.size() << endl;
-
-	//----------------------------------------Singly Linked List------------------------------------------
-
+	
+	
+	cout << "----------------------------------------Singly Linked List------------------------------------------" << endl;
 	 // create object from linked list
-	LinkedList<int> list;
+	singleLinkedList<int> list;
 
 	// add values to the list
 	list.push(10);
@@ -78,8 +83,8 @@ int main()
 
 
 
-	//----------------------------------------StackArray------------------------------------------
-
+	
+	cout << "----------------------------------------StackArray------------------------------------------" << endl;
 	// create object of stack array
 	StackArray<int> s1;
 
@@ -103,7 +108,7 @@ int main()
 	cout << "Size: " << s1.size() << endl;
 	cout << "Empty? " << (s1.isEmpty() ? "Yes" : "No") << endl;
 
-	//----------------------------------------StackLinkedList------------------------------------------
+	cout << "----------------------------------------StackLinkedList------------------------------------------" << endl;
 	// create object of stack linked list
 	StackLinkedList<int> s2;
 
@@ -127,6 +132,185 @@ int main()
 	cout << "Size: " << s2.size() << endl;
 	cout << "Empty? " << (s2.isEmpty() ? "Yes" : "No") << endl;
 
+	cout << "----------------------------------------queue array------------------------------------------"<<endl;
  
+	// Create queue object
+	QueueArray<int> q;
+
+	// Enqueue elements
+	q.enqueue(10);
+	q.enqueue(20);
+	q.enqueue(30);
+
+	// Print the queue
+	q.print(); // Output: Queue content: 10 20 30
+
+	// Show front element
+	try {
+		cout << "Front: " << q.frontValue() <<endl; // Output: 10
+	}
+	catch (const out_of_range& e) {
+		cout << e.what() << endl;
+	}
+
+	// Dequeue an element
+	q.dequeue();
+
+	// Print after dequeue
+	q.print(); // Output: Queue content: 20 30
+
+	// Enqueue more elements
+	q.enqueue(40);
+	q.enqueue(50);
+
+	// Print again
+	q.print(); // Output: Queue content: 20 30 40 50
+
+	// Show size
+	cout << "Size: " << q.size() << endl;
+
+	// Try dequeueing all to test empty case
+	q.dequeue();
+	q.dequeue();
+	q.dequeue();
+	q.dequeue(); // Now queue should be empty
+
+	// Test front on empty queue
+	try {
+		cout << "Front: " << q.frontValue() << endl;
+	}
+	catch (const out_of_range& e) {
+		cout << "Exception: " << e.what() << endl; // Should print error
+	}
+	cout << "----------------------------------------queue array circular------------------------------------------" << endl;
+
+	// Create queue object
+	QueueArrayCircular<int> q2;
+	
+
+	// Enqueue elements
+	q2.enqueue(10);
+	q2.enqueue(20);
+	q2.enqueue(30);
+
+	// Print the queue
+	q2.print(); // Output: Queue content: 10 20 30
+
+	// Show front element
+	try {
+		cout << "Front: " << q2.frontValue() << endl; // Output: 10
+	}
+	catch (const out_of_range& e) {
+		cout << e.what() << endl;
+	}
+
+	// Dequeue an element
+	q2.dequeue();
+
+	// Print after dequeue
+	q2.print(); // Output: Queue content: 20 30
+
+	// Enqueue more elements
+	q2.enqueue(40);
+	q2.enqueue(50);
+
+	// Print again
+	q2.print(); // Output: Queue content: 20 30 40 50
+
+	// Show size
+	cout << "Size: " << q.size() << endl;
+
+	// Try dequeueing all to test empty case
+	q2.dequeue();
+	q2.dequeue();
+	q2.dequeue();
+	q2.dequeue(); // Now queue should be empty
+
+	// Test front on empty queue
+	try {
+		cout << "Front: " << q2.frontValue() << endl;
+	}
+	catch (const out_of_range& e) {
+		cout << "Exception: " << e.what() << endl; // Should print error
+	}
+	cout << "----------------------------------------queue linked List------------------------------------------" << endl;
+	//create object from queue
+	QueueLinkedList<int> s;
+
+	//add values (enqueue)
+	s.enqueue(10);
+	s.enqueue(20);
+	s.enqueue(30);
+
+	//print all values
+	s.print(); // Queue content: 10 20 30
+
+	//remove one value from front
+	s.dequeue();
+
+	//print again
+	s.print(); // Queue content: 20 30
+
+	//show the front value
+	cout << "Front value: " << s.front() << endl; // 20
+
+	//show size
+	cout << "Size: " << s.size() << endl; // 2
+	s.dequeue();
+	s.dequeue();
+	//check if empty
+	// Test front on empty queue
+	try {
+		cout << "Front: " << s.front() << endl;
+	}
+	catch (const out_of_range& e) {
+		cout << "Exception: " << e.what() << endl; // Should print error
+	}
+	cout << "----------------------------------------Doubly Linked List------------------------------------------" << endl;
+	//create object from doubly linked list
+	DoublyLinkedList<int> dlist;
+
+	//add values
+	dlist.push(10);
+	dlist.push(20);
+	dlist.push(30);
+
+	//print all values forward
+	cout << "Print forward:";
+	dlist.printForward(); // 10 20 30
+
+	//print all values backward
+	cout << "Print backward:" ;
+	dlist.printBackward(); // 30 20 10
+
+	//get value at index 1
+	cout << "Value at index 1: " << dlist.get(1) << endl; // 20
+
+	//change value at index 1
+	dlist.set(1, 99);
+
+	//print after change
+	cout << "After set new value:" ;
+	dlist.printForward(); // 10 99 30
+
+	//remove last value
+	dlist.pop();
+
+	//print after pop
+	cout << "After pop:" ;
+	dlist.printForward(); // 10 99
+
+	//show size
+	cout << "Size: " << dlist.size() << endl; // 2
+
+	//try to get value out of range
+	try {
+		cout << dlist.get(10) << endl;
+	}
+	catch (const out_of_range& e) {
+		cout << "Exception: " << e.what() << endl;
+	}
+
+
 }
 
