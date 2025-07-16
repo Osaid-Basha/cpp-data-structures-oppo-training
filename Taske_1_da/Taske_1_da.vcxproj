@@ -128,10 +128,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BinaryTree.cpp" />
     <ClCompile Include="Taske_1_da.cpp" />
+    <ClCompile Include="TNode.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="array.h" />
+    <ClInclude Include="BinarySearchTree.h" />
+    <ClInclude Include="BinaryTree.h" />
     <ClInclude Include="CircularLinkedList.h" />
     <ClInclude Include="DoublyLinkedList.h" />
     <ClInclude Include="QueueArrayCircular.h" />

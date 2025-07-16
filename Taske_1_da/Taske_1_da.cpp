@@ -13,6 +13,8 @@ using namespace std;
 #include "QueueLinkedList.h"
 #include "DoublyLinkedList.h"
 #include "QueueArrayCircular.h"
+#include "BinarySearchTree.h"
+#include "BinaryTree.h"
 
 int main()
 {	
@@ -310,6 +312,71 @@ int main()
 	catch (const out_of_range& e) {
 		cout << "Exception: " << e.what() << endl;
 	}
+
+	cout << "----------------------------------------Binary Search Tree------------------------------------------" << endl;
+	// Create a binary search tree
+	BinarySearchTree<int> bst;
+	// Insert values into the BST
+	bst.insert(30);
+	bst.insert(20);
+	bst.insert(40);
+	bst.insert(10);
+	bst.insert(25);
+	// Print the BST in-order
+	cout << "In-order traversal of BST: ";
+
+	cout <<endl << "print_LNR: ";
+	bst.print_LNR(bst.getRoot()); // Should print: 10 20 25 30 40
+	cout << endl;
+	cout << "print_NLR: ";
+	bst.print_RNL(bst.getRoot()); // Should print: 40 30 25 20 10
+	cout << endl;
+	cout << "print_NLR: ";
+	bst.print_NLR(bst.getRoot()); // Should print: 30 20 10 25 40
+	cout << endl;
+	// Show size of the BST
+	cout << "Size of BST: " << bst.size() << endl; // Should print 5
+
+	bst.insert(20); 
+
+	cout << endl << "print_LNR: ";
+	bst.print_LNR(bst.getRoot()); // Should print: 10 20 25 30 40
+	cout << endl;
+
+
+	cout << "----------------------------------------Binary Tree------------------------------------------" << endl;
+
+	// create object of Binary Tree
+	BinaryTree<int> tree;
+
+	// create root node
+	tree.createRoot(10);
+	BNode<int>* root = tree.getRoot();
+
+	// add left and right children to root
+	tree.addLeft(root, 5);
+	tree.addRight(root, 15);
+
+	// add children to the left subtree
+	tree.addLeft(root->left, 2);
+	tree.addRight(root->left, 7);
+
+	// add children to the right subtree
+	tree.addLeft(root->right, 12);
+	tree.addRight(root->right, 20);
+
+	// print all traversals
+	cout << "Inorder: ";
+	tree.inorder(tree.getRoot()); // Output: 2 5 7 10 12 15 20
+	cout << endl;
+
+	cout << "Preorder: ";
+	tree.preorder(tree.getRoot()); // Output: 10 5 2 7 15 12 20
+	cout << endl;
+
+	cout << "Postorder: ";
+	tree.postorder(tree.getRoot()); // Output: 2 7 5 12 20 15 10
+	cout << endl;
 
 
 }
