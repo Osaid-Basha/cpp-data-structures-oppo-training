@@ -1,3 +1,4 @@
+
 # 📚 Data Structures - Week Implementation
 
 This repository contains the implementation of fundamental data structures using C++.  
@@ -7,7 +8,7 @@ Each data structure is well-documented, tested, and organized for clarity and fu
 
 ## 🧠 Data Structures Descriptions
 
-### 1. Dynamic Array (array.h)
+### 1. Dynamic Array (`array.h`)
 A dynamic array that automatically resizes when capacity is reached. Implemented from scratch using raw pointers.
 
 - **Time Complexity**:
@@ -19,7 +20,7 @@ A dynamic array that automatically resizes when capacity is reached. Implemented
 
 ---
 
-### 2. Singly Linked List (singleLinkedList.h)
+### 2. Singly Linked List (`singleLinkedList.h`)
 A linear structure where each node points to the next. Supports insertion, deletion, and access by index.
 
 - **Time Complexity**:
@@ -30,7 +31,7 @@ A linear structure where each node points to the next. Supports insertion, delet
 
 ---
 
-### 3. Stack using Array (StackArray.h)
+### 3. Stack using Array (`StackArray.h`)
 LIFO structure backed by dynamic array. Fast push/pop at the top.
 
 - **Time Complexity**:
@@ -41,7 +42,7 @@ LIFO structure backed by dynamic array. Fast push/pop at the top.
 
 ---
 
-### 4. Stack using Linked List (StackLinkedList.h)
+### 4. Stack using Linked List (`StackLinkedList.h`)
 LIFO stack implemented using singly linked list.
 
 - **Time Complexity**:
@@ -52,7 +53,7 @@ LIFO stack implemented using singly linked list.
 
 ---
 
-### 5. Queue using Array (QueueArray.h)
+### 5. Queue using Array (`QueueArray.h`)
 FIFO structure with circular array logic. Efficient enqueue/dequeue from both ends.
 
 - **Time Complexity**:
@@ -63,7 +64,7 @@ FIFO structure with circular array logic. Efficient enqueue/dequeue from both en
 
 ---
 
-### 6. Queue using Linked List (QueueLinkedList.h)
+### 6. Queue using Linked List (`QueueLinkedList.h`)
 Queue built using singly linked list, tracking front and rear.
 
 - **Time Complexity**:
@@ -74,7 +75,7 @@ Queue built using singly linked list, tracking front and rear.
 
 ---
 
-### 7. Doubly Linked List (DoublyLinkedList.h)
+### 7. Doubly Linked List (`DoublyLinkedList.h`)
 Each node stores reference to both previous and next. Allows traversal in both directions.
 
 - **Time Complexity**:
@@ -85,7 +86,7 @@ Each node stores reference to both previous and next. Allows traversal in both d
 
 ---
 
-### 8. Circular Linked List (CircularLinkedList.h)
+### 8. Circular Linked List (`CircularLinkedList.h`)
 Linked list where last node connects to the first, forming a cycle. Useful for round-robin tasks.
 
 - **Time Complexity**:
@@ -96,13 +97,34 @@ Linked list where last node connects to the first, forming a cycle. Useful for r
 
 ---
 
-## ✅ Usage Example (Taske_1_da.cpp)
+### 9. Binary Tree (`BinaryTree.h`)
+General binary tree implementation with left and right children, and support for preorder, inorder, and postorder traversals.
+
+- **Time Complexity**:
+  - Insert (specific position): `O(1)`
+  - Traverse: `O(n)`
+- **Space Complexity**: `O(n)`
+
+---
+
+### 10. Binary Search Tree (`BinarySearchTree.h`)
+A binary tree where the left child is smaller, and the right child is larger. Supports fast search and ordered traversal.
+
+- **Time Complexity**:
+  - Insert: `O(log n)` average, `O(n)` worst-case
+  - Traverse: `O(n)`
+- **Space Complexity**: `O(n)`
+
+---
+
+## ✅ Usage Example (`Taske_1_da.cpp`)
 
 The file `Taske_1_da.cpp` includes demonstrations and test cases for:
 
 - Inserting and deleting values
 - Accessing and modifying elements
 - Printing current data
+- Tree traversals: inorder, preorder, postorder
 - Exception handling for out-of-bound access
 
 ---
@@ -128,6 +150,8 @@ g++ Taske_1_da.cpp -o runme
 ├── QueueLinkedList.h
 ├── DoublyLinkedList.h
 ├── CircularLinkedList.h
+├── BinaryTree.h
+├── BinarySearchTree.h
 ├── Node.h
 └── Taske_1_da.cpp
 ```
@@ -139,4 +163,3 @@ g++ Taske_1_da.cpp -o runme
 - All test cases are located inside `Taske_1_da.cpp`
 - Simply compile and run as shown above
 - Output will display for each structure
-
