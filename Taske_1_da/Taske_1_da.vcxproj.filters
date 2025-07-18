@@ -31,15 +31,27 @@
     <Filter Include="Header Files\Tree">
       <UniqueIdentifier>{c9b877d8-890f-4834-a900-b16ebafb0452}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Hash">
+      <UniqueIdentifier>{a711d15c-e7c5-432b-8e15-7bfc56af2838}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Heap">
+      <UniqueIdentifier>{8f0f021d-bcc5-49d3-86c2-19bbf73eebbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Basic Graph">
+      <UniqueIdentifier>{6770ddf0-4693-4531-857e-0ae7c6ef4ae8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Trie">
+      <UniqueIdentifier>{fe96bdc0-93dc-4287-9bf8-5deaf9ed4157}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Union Find">
+      <UniqueIdentifier>{e65cdda9-0af9-419b-8229-19eb797828cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Graph traversal">
+      <UniqueIdentifier>{cbc9feda-64d7-4b5c-8b75-1fa48aa75708}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Taske_1_da.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BinaryTree.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TNode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -79,6 +91,27 @@
     </ClInclude>
     <ClInclude Include="BinaryTree.h">
       <Filter>Header Files\Tree</Filter>
+    </ClInclude>
+    <ClInclude Include="HashArray.h">
+      <Filter>Header Files\Hash</Filter>
+    </ClInclude>
+    <ClInclude Include="Hash.h">
+      <Filter>Header Files\Hash</Filter>
+    </ClInclude>
+    <ClInclude Include="Heap.h">
+      <Filter>Header Files\Heap</Filter>
+    </ClInclude>
+    <ClInclude Include="BasicGraph.h">
+      <Filter>Header Files\Basic Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="Trie.h">
+      <Filter>Header Files\Trie</Filter>
+    </ClInclude>
+    <ClInclude Include="DisjointSet.h">
+      <Filter>Header Files\Union Find</Filter>
+    </ClInclude>
+    <ClInclude Include="Graph.h">
+      <Filter>Header Files\Graph traversal</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

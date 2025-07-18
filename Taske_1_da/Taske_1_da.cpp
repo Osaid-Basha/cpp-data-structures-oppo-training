@@ -15,7 +15,12 @@ using namespace std;
 #include "QueueArrayCircular.h"
 #include "BinarySearchTree.h"
 #include "BinaryTree.h"
-
+#include "HashArray.h"
+#include "Heap.h"
+#include "BasicGraph.h"
+#include "Trie.h"
+#include "DisjointSet.h"
+#include "Graph.h"
 int main()
 {	
 	cout << "----------------------------------------Dynamic Arrays------------------------------------------" << endl;
@@ -377,7 +382,171 @@ int main()
 	cout << "Postorder: ";
 	tree.postorder(tree.getRoot()); // Output: 2 7 5 12 20 15 10
 	cout << endl;
+	cout << "----------------------------------------Hash Array------------------------------------------" << endl;
 
+
+	// Create a HashArray object
+	HashArray<int> h;
+
+	// Insert values
+	h.insert(10);
+	h.insert(22);
+	h.insert(3);
+
+	// Print all elements
+	h.print();
+
+	// Remove a value
+	h.remove(22);
+
+	// Print after removal
+	cout << "After removing 22:" << endl;
+	h.print();
+
+	// Find the index of a value
+	int index = h.find(10);
+	cout << "Index of 10: " << index << endl;
+
+	// Show current size
+	cout << "Size: " << h.size() << endl;
+
+	cout << "----------------------------------------Hash linked list------------------------------------------" << endl;
+
+	// create object of hash table
+	HashArray<int> m;
+
+	// insert values
+	m.insert(10);  // insert 10
+	m.insert(17);  // insert 17 → same index as 10 (collision)
+	m.insert(3);   // insert 3 → different index
+	m.insert(24);  // insert 24 → collision with 10 & 17
+
+	// print all values
+	cout << "Table content after inserts:" << endl;
+	m.print(); // print linked lists in each bucket
+
+	// try inserting duplicate
+	cout << "Trying to insert duplicate (17):" << endl;
+	bool result = m.insert(17); // already exists
+	cout << (result ? "Inserted" : "Already exists") << endl;
+
+	// insert more values
+	m.insert(5);
+	m.insert(12);
+
+	// print again
+	cout << "Table content after more inserts:" << endl;
+	m.print();
+
+	// show size
+	cout << "Size: " << m.size() << endl;
+
+	cout << "----------------------------------------Min Heap------------------------------------------" << endl;
+
+	// create MinHeap object
+	MinHeap<int> heap;
+
+	// insert values
+	heap.insert(30);
+	heap.insert(20);
+	heap.insert(40);
+	heap.insert(10);
+
+	// print current heap
+	cout << "Heap elements: ";
+	heap.print(); // should show: 10 20 40 30 or similar structure
+
+	// get minimum value
+	cout << "Min value: " << heap.getMin() << endl;
+
+	// remove min
+	heap.removeMin();
+
+	// print after removal
+	cout << "After removing min: ";
+	heap.print();
+
+	// insert more
+	heap.insert(5);
+	heap.insert(35);
+
+	// print again
+	cout << "After inserting 5 and 35: ";
+	heap.print();
+
+	// size
+	cout << "Size: " << heap.getSize() << endl;
+
+	cout << "----------------------------------------Basic Graph------------------------------------------" << endl;
+
+	// create object with 6 nodes (0 to 5)
+	BasicGraph g(6);
+
+	// add edges
+	g.addEdge(1, 2);
+	g.addEdge(1, 3);
+	g.addEdge(2, 4);
+	g.addEdge(3, 4);
+	g.addEdge(4, 5);
+
+	// print adjacency list
+	cout << "Graph content:" << endl;
+	g.print();
+	cout << "----------------------------------------Trie Structure------------------------------------------" << endl;
+
+	// Create object of Trie
+	Trie trie;
+
+	// Add words to trie
+	trie.insert("cat");
+	trie.insert("car");
+	trie.insert("dog");
+
+	// Search for full words
+	cout << "Search for 'cat': " << (trie.search("cat") ? "Found" : "Not Found") << endl;
+	cout << "Search for 'can': " << (trie.search("can") ? "Found" : "Not Found") << endl;
+
+	// Check if any word starts with given prefix
+	cout << "Starts with 'ca': " << (trie.startsWith("ca") ? "Yes" : "No") << endl;
+	cout << "Starts with 'do': " << (trie.startsWith("do") ? "Yes" : "No") << endl;
+	cout << "Starts with 'z': " << (trie.startsWith("z") ? "Yes" : "No") << endl;
+	cout << "------------------------------------------Union-Find (Disjoint Set)------------------------------------------" << endl;
+
+	// create object with 6 elements (0 to 5)
+	DisjointSet ds(6);
+
+	// unite some pairs
+	ds.unite(0, 1); // connect 0 and 1
+	ds.unite(2, 3); // connect 2 and 3
+	ds.unite(4, 5); // connect 4 and 5
+	ds.unite(2, 4); // merge set(2,3) with set(4,5)
+
+	// check connections
+	cout << "Are 0 and 1 connected? " << (ds.connected(0, 1) ? "Yes" : "No") << endl;
+	cout << "Are 1 and 2 connected? " << (ds.connected(1, 2) ? "Yes" : "No") << endl;
+	cout << "Are 3 and 5 connected? " << (ds.connected(3, 5) ? "Yes" : "No") << endl;
+
+	// print parent array
+	ds.printParents();
+	cout << "------------- Graph without map -------------" << endl;
+
+	// create graph using letters
+	Graph<string> v;
+
+	// add edges
+	v.addEdge("A", "B");
+	v.addEdge("A", "C");
+	v.addEdge("B", "D");
+	v.addEdge("C", "E");
+	v.addEdge("D", "F");
+	v.addEdge("E", "F");
+
+	// print graph
+	v.print();
+
+	// DFS and BFS
+	v.DFS("A");
+	v.BFS("A");
 
 }
 

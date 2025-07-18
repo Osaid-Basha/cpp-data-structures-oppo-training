@@ -128,16 +128,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="BinaryTree.cpp" />
     <ClCompile Include="Taske_1_da.cpp" />
-    <ClCompile Include="TNode.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="array.h" />
+    <ClInclude Include="BasicGraph.h" />
     <ClInclude Include="BinarySearchTree.h" />
     <ClInclude Include="BinaryTree.h" />
     <ClInclude Include="CircularLinkedList.h" />
+    <ClInclude Include="DisjointSet.h" />
     <ClInclude Include="DoublyLinkedList.h" />
+    <ClInclude Include="Graph.h" />
+    <ClInclude Include="Hash.h" />
+    <ClInclude Include="HashArray.h" />
+    <ClInclude Include="Heap.h" />
     <ClInclude Include="QueueArrayCircular.h" />
     <ClInclude Include="singleLinkedList.h" />
     <ClInclude Include="Node.h" />
@@ -145,6 +149,7 @@
     <ClInclude Include="QueueLinkedList.h" />
     <ClInclude Include="StackArray.h" />
     <ClInclude Include="StackLinkedList.h" />
+    <ClInclude Include="Trie.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
